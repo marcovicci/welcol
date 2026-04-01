@@ -7,14 +7,14 @@ const app = express();
 
 app.use(cors());
 
-if (!existsSync('petcount.txt'))
-    writeFile('petcount.txt', '0', 'utf8');
+if (!existsSync('/pet/petcount.txt'))
+    writeFile('/pet/petcount.txt', '0', 'utf8');
 
-let pet = parseInt(await readFile('petcount.txt', 'utf8'));
+let pet = parseInt(await readFile('/pet/petcount.txt', 'utf8'));
 
 app.get('/pet', (req, res) => {
     pet++;
-    writeFile('petcount.txt', pet.toString(), 'utf8');
+    writeFile('/pet/petcount.txt', pet.toString(), 'utf8');
     res.sendStatus(200);
 });
 

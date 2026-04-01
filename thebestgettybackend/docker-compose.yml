@@ -9,6 +9,6 @@ services:
     volumes:
       - type: volume
         source: pet
-        target: /app/petcounter.txt
+        target: /pet
     ports:
       - "9999:9999"
