@@ -1,12 +1,17 @@
 import express from "express";
-import fs from "fs/promises";
+import { readFile, writeFile } from "fs/promises";
+import { existsSync } from "fs";
 
 const app = express();
-let pet = parseInt(await fs.readFile('petcount.txt', 'utf8'));
+
+if (!existsSync('petcount.txt'))
+    writeFile('petcount.txt', '0', 'utf8');
+
+let pet = parseInt(await readFile('petcount.txt', 'utf8'));
 
 app.get('/pet', (req, res) => {
     pet++;
-    fs.writeFile('petcount.txt', pet.toString());
+    writeFile('petcount.txt', pet.toString(), 'utf8');
     res.sendStatus(200);
 });
 
