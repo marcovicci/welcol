@@ -4,6 +4,8 @@ import { existsSync } from "fs";
 
 const app = express();
 
+app.use(cors());
+
 if (!existsSync('petcount.txt'))
     writeFile('petcount.txt', '0', 'utf8');
 

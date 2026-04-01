@@ -1,5 +1,12 @@
 var pet = 0;
 
+async function init() {
+    let getty_req = await fetch("https://getty.drewfitzgerald.co.nz/");
+    var pet = parseInt(await getty_req.text());
+
+    document.getElementById('c').innerHTML = pet;
+}
+
 function gatito() {
     console.log("gatito");
     let val = prompt("gatito?");
@@ -9,7 +16,10 @@ function gatito() {
 }
 
 function pet_getty() {
-    pet+=1;
+    pet++;
+    fetch("https://getty.drewfitzgerald.co.nz/pet");
 
-    document.getElementById('c').innerHTML =  pet;
+    document.getElementById('c').innerHTML = pet;
 }
+
+init();
