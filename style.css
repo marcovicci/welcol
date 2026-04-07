@@ -1,31 +1,7 @@
-body {
-    background-color: yellow;
-    display: flex;
-    flex-direction: column;
-}
-
-.flex {
-    display: flex;
-}
-
-.row {
-    flex-direction: row;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.centered {
-    align-items: center;
-    justify-content: center;
-}
-
-h1, h2, h3, h4, h5, p {
-    color: red;
-}
-
-iframe {
-    color: blue;
-    padding: 4vw 25vw;
-}
+button {
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 125px;
+    box-shadow: inset 0 13px 25px rgba(255,255,255,0.5), 0 3px 5px rgba(0,0,0,0.2), 0 10px 13px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-family: "Agdasima" ;}
