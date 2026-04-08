@@ -22,4 +22,18 @@ function pet_getty() {
     document.getElementById('c').innerHTML = pet;
 }
 
+function openNav(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    document.getElementById("nav-content")
+        .classList.toggle("open");
+}
+
+document.body.addEventListener('click', function(event) {
+    if (event.target.id != "nav-content") {
+        document.getElementById("nav-content").classList = "hamburger";
+    }
+});
+
 init();

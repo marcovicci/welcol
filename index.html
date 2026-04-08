@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_index.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Wellington College</title>
+    </head>
 
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_index.css">
-    <title>Wellington College</title>
-</head>
-
-<body>
-    <header>
-        <nav>
-            <h2>Wellington College</h2>
+    <nav>
+        <h2>Wellington College</h2>
+        <div class="hamburger" id="nav-content">
             <a href="index.html" class="button">HOME</a>
             <a href="https://github.com/bvdlcoidetwf/bvdlcoidetwf.github.io" class="button">GITHUB</a>
             <a href="ArohasCar.html" class="button">AROHA'S CAR</a>
             <a href="iframe.html" class="button">IFRAME</a>
             <button class="button" onclick="gatito()">GATITO?</button>
-        </nav>
-    </header>
-    <div class="image">
-            <img height="447px" width="670" src="gettyimages-1687139789-612x612.jpg"
-                alt="An image of getty. Getty is a cat">
         </div>
-        <div class="pet-count">;
-            <span id="txt">GETTY PET COUNT: <span id='c'>0</span></span>
-            <button class="button" onclick="gatito()">Gatito?</button>
-            <button class="button" onclick="pet_getty()">Pet Getty</button>
-        </div>
-    <div class="hero-text" style="position: fixed; left:1em; top:45%;">
-        <h1>MEET GETTY.</h1>
-    </div>
-    
-    <script src="/gatito.js?cache=nocachethankyou"></script>
-</body>
+        <h2 class="menu-btn unselectable" id="nav-btn" onclick="openNav(event)">Menu</h2>
+    </nav>
 
+    <body>
+        <main>
+            <div class="flex row centered main-sect">
+                <div class="hero-text">
+                    <h1>MEET GETTY.</h1>
+                </div>
+
+                <div class="flex column">
+                    <img class="image" src="gettyimages-1687139789-612x612.jpg" alt="An image of getty. Getty is a cat">
+
+                    <div class="pet-count">
+                        <span id="txt">GETTY PET COUNT: <span id='c'>0</span></span>
+                        <div class="pet-btn">
+                            <button class="button" onclick="gatito()">Gatito?</button>
+                            <button class="button" onclick="pet_getty()">Pet Getty</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <script src="gatito.js?cache=idontwantcachepleasethankyou"></script>
+    </body>
 </html>
